@@ -1,0 +1,793 @@
+:root {
+  --textColor: white;
+  --textColor2: black;
+
+  --bgColor: black;
+  --buttonColor: #1cbe5f;
+  --mainColor: #1cbe5f;
+  --hoverColor: hwb(123 76% 0%);
+  --borderColor: #063a1c;
+  --marginSection: 10px;
+
+  --heroColor: hsl(0, 0%, 90%);
+  --buttonHover: hsl(120, 77%, 31%);
+
+  --marginSection: 10px;
+  --fontFamily: DM, sans-serif;
+  --fontSizeH1: clamp(1.5rem, 3vw, 5rem);
+  --fontSizeH2: clamp(1.25rem, 2vw, 3rem);
+  --fontSizeH3: clamp(1rem, 1.5vw, 2rem);
+  --fontSizeP: clamp(1rem, 1.5vw, 3rem);
+  --radius: 10px;
+  --shadowLight: 0px 0px 5px var(--textColor);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* mobile view COLUMN DESIGN image then text */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--mainColor);
+}
+a {
+  color: var(--textColor2);
+  text-underline-offset: 4px;
+}
+
+/* header  */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--mainColor);
+  padding: 4%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  opacity: 95%;
+  max-height: 75px;
+}
+header h1 {
+  flex-shrink: 0;
+}
+nav ul {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.show {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#hamburger img,
+#close img {
+  width: 2rem;
+  height: 2rem;
+}
+
+#desktop-nav {
+  display: none;
+}
+
+#mobile-menu {
+  background-color: var(--mainColor);
+  padding: 0.5rem;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  z-index: 1;
+  opacity: 95%;
+}
+
+#mobile-menu li {
+  padding: 1.2rem;
+  border-bottom: 1px solid;
+  border-color: var(--borderColor);
+}
+
+#mobile-menu a {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#mobile-menu a:hover {
+  color: #68e36e;
+}
+
+#hamburger,
+#close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* generate filter value from https://isotropic.co/tool/hex-color-to-css-filter/ */
+#hamburger:hover img,
+#close:hover img {
+  filter: invert(65%) sepia(96%) saturate(278%) hue-rotate(72deg)
+    brightness(102%) contrast(88%);
+  transform: scale(1.2);
+}
+
+/* main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+
+/* hero section for homepage and customer service - start  */
+#hero-section {
+  position: relative;
+  background-image: url('images/bank.webp');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  color: var(--textColor);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.801);
+}
+
+#hero-section * {
+  position: relative;
+}
+
+#hero-section h1 {
+  margin: var(--marginSection);
+  font-size: var(--fontSizeH1)
+}
+
+#hero-section p {
+  margin: var(--marginSection);
+  margin-bottom: 2rem;
+  font-size: var(--fontSizeP);
+  line-height: 2rem;
+  max-width: 500px;
+}
+
+#hero-section a,
+.prices-hero-section a,
+.loan-hero-section a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--textColor2);
+  background-color: var(--buttonColor);
+  padding: 10px 20px;
+  border-radius: 15px;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+#hero-section a:hover,
+.prices-hero-section a:hover,
+.loan-hero-section a:hover {
+  color: var(--hoverColor);
+  font-weight: bolder;
+  transform: scale(1.1);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  /* don't worry color is just for dev purposes  */
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  margin: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card h2,
+p {
+  margin: var(--marginSection);
+}
+
+/* footer */
+
+footer {
+  background-color: var(--mainColor);
+  font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#keepContact {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#phoneMail {
+  display: block;
+}
+
+#phoneMail p {
+  margin: 0;
+}
+#phoneMail a {
+  text-decoration: none;
+  color: black;
+}
+#phoneMail a:hover {
+  text-decoration: underline;
+}
+
+.iconic {
+  margin: 50px 0;
+  float: left;
+  display: grid;
+  grid-template-columns: repeat(6, 25px);
+  grid-template-rows: 25px 2fr;
+  gap: 10px;
+}
+footer svg {
+  height: 24px;
+  margin: 5px;
+}
+.iconic svg:hover {
+  cursor: pointer;
+  fill: var(--hoverColor);
+  height: 26px;
+}
+
+#copyright p {
+  margin: 2px;
+}
+
+#copyright {
+  border-top: 1px solid;
+  padding-top: 10px;
+  align-self: stretch;
+  text-align: center;
+  margin: 3%;
+}
+
+/* vi lurar dig - namn */
+#realName {
+  font-size: 10px;
+  font-style: italic;
+  text-align: center;
+}
+
+#pigBtn {
+  display: none;
+}
+
+#accordion-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#accordion-container h2 {
+  font-size: 1.2em;
+}
+
+/* customer service  */
+
+#accordion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: 1rem;
+  width: clamp(300px, 90%, 100%);
+  justify-content: center;
+}
+
+summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #063a1c;
+}
+
+summary:hover {
+  background: #68e36e;
+  cursor: pointer;
+}
+
+summary::after {
+  content: '';
+  width: 18px;
+  height: 10px;
+  background: url('https://uploads.sitepoint.com/wp-content/uploads/2023/10/1697699669arrow.svg')
+    no-repeat;
+  background-size: cover;
+  margin-left: 0.75em;
+  transition: 0.2s;
+}
+
+details {
+  border-left: 1px solid #063a1c;
+  border-right: 1px solid #063a1c;
+}
+
+details:first-child {
+  border-radius: 4px 4px 0 0;
+  border-top: 1px solid #063a1c;
+  border-left: 1px solid #063a1c;
+  border-right: 1px solid #063a1c;
+}
+
+details:last-child {
+  border-radius: 0 0 4px 4px;
+  border-left: 1px solid #063a1c;
+  border-right: 1px solid #063a1c;
+}
+
+details > summary {
+  transition: color 1s;
+}
+
+details[open] {
+  border-bottom: 1px solid #063a1c;
+}
+details[open]:last-child {
+  border-bottom: 1px solid #063a1c;
+}
+
+details[open] > summary {
+  border-bottom: none;
+}
+details[open] > summary::after {
+  transform: rotate(-180deg);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 500px auto;
+  text-align: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.box {
+  border: solid 1px black;
+  display: flex;
+  padding: 1.2rem;
+  margin-bottom: 1rem;  
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  max-width: 600px;
+  height: 180px;
+  gap: 1rem;
+  width: 90%;
+  color: white;
+  background-color: black;
+  border-radius: 1.5rem;
+}
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--textColor2);
+  background-color: var(--buttonColor);
+  padding: 10px 20px;
+  border-radius: 15px;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+.button:hover {
+  color: var(--hoverColor);
+  font-weight: bolder;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#button {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+div {
+  align-self: center;
+}
+/* prices */
+main {
+  display: flex;
+}
+
+.prices-hero-section {
+  height: 30vh;
+  padding: 2rem;
+  background-color: var(--heroColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.prices-hero-section span,
+.loan-hero-section span {
+  color: var(--buttonHover);
+}
+
+.price-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 2rem 1rem;
+}
+
+.price-section article {
+  padding: 2rem;
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.prices-secton h1 {
+  font-size: var(--fontSizeH1);
+}
+
+.prices-secton h2 {
+  font-size: var(--fontSizeH2);
+}
+
+.prices-secton h3 {
+  font-size: var(--fontSizeH3);
+}
+
+.prices-secton p {
+  font-size: var(--fontSizeP);
+}
+
+.price-section img {
+  width: 100%;
+  margin-top: auto;
+  transition: all 0.3s linear;
+
+  &:hover {
+    transform: scale(1.1);
+    transform: translateY(-5px);
+  }
+}
+
+/* login */
+
+#login {
+  background-image: url("images/Gröna\ löv.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  padding: 2rem;
+}
+
+.inlogg {
+  background-color: rgb(171, 241, 175);
+  background: radial-gradient(
+    rgb(171, 241, 175),
+    rgb(171, 241, 175),
+    rgba(171, 241, 175, 0.534)
+  );
+  color: rgb(6, 40, 6);
+  display: flex;
+  margin: 0 auto 0 auto;
+  padding: 10px;
+  width: clamp(300px, 70%, 90%);
+  flex-direction: column;
+  border-radius: 10px;
+}
+.inlogg h3 {
+  margin-bottom: 0px;
+}
+#inputText {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+}
+.privat,
+.företag {
+  border: 1px solid green;
+  padding: 35px;
+  border-radius: 20px;
+  margin-top: 15px;
+  background-color: rgb(183, 244, 186);
+}
+.val {
+  margin-top: 2rem;
+  margin-bottom: 10px;
+}
+
+.space {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 550px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  #mobile-menu {
+    padding: 0 1.5rem 0 1.5rem;
+    position: fixed;
+    height: 63%;
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+    opacity: 95%;
+  }
+
+  #mobile-menu li {
+    padding: 1.5rem;
+    border-bottom: 1px solid;
+    border-color: var(--borderColor);
+  }
+
+  #mobile-menu a {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  #hero-section {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+
+  #hero-section a {
+    display: inline-block;
+    /* padding: 10px 20px; */
+  }
+
+  .card {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .card img {
+    max-width: 50%;
+  }
+
+  .card article {
+    align-self: center;
+  }
+  .card h2 {
+    position: relative;
+    top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .contactDiv {
+    display: grid;
+    grid-template-columns:1fr 44vw 1fr 44vw 1fr;
+    grid-template-rows: 10vh;
+    align-items: center;
+  }
+
+  #phoneMail {
+    grid-column: 2;
+  }
+
+  .iconic {
+    grid-template-columns: repeat(3, 25px);
+    grid-template-rows: repeat(2, 25px);
+    justify-self: end;
+  }
+
+  #pigBtn {
+    display: block;
+    background: transparent;
+    border: none;
+    position: relative;
+    outline: none;
+  }
+  /* AI generated  */
+  #moneyFountain {
+    position: absolute;
+    height: 180px;
+    overflow: hidden;
+    width: 200px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust position to center */
+    bottom: -105px;
+    cursor: default;
+  }
+
+  .money {
+    position: absolute;
+    font-size: 24px;
+    animation: shoot 1s forwards;
+    opacity: 1;
+  }
+
+  @keyframes shoot {
+    0% {
+      bottom: 150px;
+      transform: translateX(-30%);
+      opacity: 1;
+    }
+    50% {
+      bottom: calc(200px + var(--heightOffset));
+      transform: translateX(var(--spread));
+    }
+    100% {
+      bottom: calc(200px + var(--heightOffset));
+      transform: translateX(var(--spread));
+      opacity: 0;
+    }
+  }
+
+  .price-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  #desktop-nav {
+    display: flex;
+  }
+
+  #desktop-nav ul {
+    display: flex;
+    flex-direction: row;
+    color: black;
+  }
+  #desktop-nav a {
+    flex-shrink: 0;
+    color: black;
+    font-size: 1.2rem;
+  }
+  #desktop-nav a:hover {
+    color: var(--hoverColor);
+  }
+  #desktop-nav ul {
+    gap: 2rem;
+  }
+  #hamburger {
+    display: none;
+  }
+  #mobile-menu {
+    display: none;
+  }
+  #hamburger,
+  #close {
+    display: none;
+  }
+
+  #container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .box {
+    width: 100%;
+  }
+
+  /* button {
+    width: 150px auto;
+  } */
+
+  .price-section {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 80vw;
+    align-self: center;
+  }
+}
+/* #endregion */
+
+.price-section article {
+  padding: 2rem;
+  background-color: var(--bgColor);
+  border-radius: var(--radius);
+}
+
+#image-light {
+  filter: hue-rotate(220deg) saturate(100%);
+}
+#image-plus {
+  filter: sepia(100%);
+}
+#image-ultimate {
+  filter: brightness(0.419) contrast(140%) saturate(0%);
+}
+
+/* transparent prices section/article */
+
+/* add image on the right side for desktop , keep as column for mobile */
+#about-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-wrap: wrap;
+  background-color: var(--bgColor);
+  color: var(--textColor);
+
+  width: 94vw;
+  margin: 2rem 2rem;
+  align-self: center;
+  border-radius: var(--radius);
+
+  & p span {
+    opacity: 0.7;
+  }
+}
+
+/* dont remove - for some reason prices breask without this  */
+main {
+  display: flex;
+}
+
+.loan-image {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+#loan-money {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+}
+#loan-money p {
+  text-align: center;
+}

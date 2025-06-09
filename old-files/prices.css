@@ -1,0 +1,233 @@
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --heroColor: hsl(0, 0%, 65%); */
+    --heroColor: hsl(0, 0%, 90%);
+    --textColor: white;
+    --textColor2: black;
+    --bgColor: black;
+    --buttonColor: hsl(120, 77%, 26%);
+    --buttonHover: hsl(120, 77%, 31%);
+    --marginSection: 10px;
+    --fontFamily: DM, sans-serif;
+    --fontSizeH1: clamp(1.5rem, 3vw, 4rem);
+    --fontSizeH2: clamp(1.25rem, 2vw, 3rem);
+    --fontSizeH3: clamp(1rem, 1.5vw, 2rem);
+    --fontSizeP: clamp(0.80rem, 1.05vw, 1.25rem);
+    --radius: 10px;
+    --shadowLight: 0px 0px 5px var(--textColor);
+    
+   
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1rem;
+    font-family: var(--fontFamily);
+}
+
+button {
+    color: var(--textColor);
+    text-transform: uppercase;
+    background-color: var(--buttonColor);
+    color: var(--textColor);
+    border: 0px;
+    cursor: pointer;
+    border-radius: 2rem;
+    /* width: fit-content; */
+    width: 150px;
+    text-wrap: nowrap;
+    
+    padding: 0.5rem 1rem;
+    align-self: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+        background-color: var(--buttonHover);
+            cursor: pointer;
+            box-shadow: var(--shadowLight);
+            
+        
+    }
+    & a {
+        color: var(--textColor);
+    }
+    
+}
+ 
+
+
+
+.hero-section {
+    height: 30vh;
+    padding: 2rem;
+    background-color: var(--heroColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.hero-section span {
+    color:var(--buttonHover);
+}
+
+
+
+.price-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    gap: 1rem;
+    margin: 0rem 1rem;
+}
+
+.price-section article {
+    padding: 2rem;
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: var(--radius);
+    text-align: center;
+    
+}
+
+
+h1 {
+    font-size: var(--fontSizeH1);
+}
+
+h2 {
+    font-size: var(--fontSizeH2);
+}
+
+h3 {
+    font-size: var(--fontSizeH3);
+}
+
+p {
+    font-size: var(--fontSizeP);
+}
+
+ /* .price-section button {
+    background-color: var(--buttonColor);
+    color: var(--textColor);
+    border: 0px;
+    cursor: pointer;
+    border-radius: 2rem;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    align-self: center;
+}  */
+
+.price-section img {
+    width: 100%;
+    margin-top: auto;
+    transition: all .3s linear;
+    
+    &:hover {
+        transform: scale(1.10);
+        transform: translateY(-5px)
+        
+        
+    }
+    
+}
+
+
+
+/* min-width 600px  */
+@media (min-width: 600px) {
+    .price-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* end */
+
+
+
+/* Min width 1200px */
+@media (min-width: 1050px) {
+    .price-section {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 80vw;
+        align-self: center;
+
+    }
+}
+/* #endregion */
+
+
+.price-section article {
+    padding: 2rem;
+    background-color: var(--bgColor);
+    border-radius: var(--radius);
+    
+    
+    
+    
+    
+}
+
+
+#image-light {
+    filter: hue-rotate(220deg) saturate(100%);
+
+
+}
+#image-plus {
+   filter: sepia(100%) ;
+}
+#image-ultimate {
+    
+    filter: brightness(0.419) contrast(140%) saturate(0%);
+}
+
+
+
+/* transparent prices section/article */
+
+/* add image on the right side for desktop , keep as column for mobile */
+#about-prices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    text-wrap: wrap;
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    
+    width: 94vw;
+    margin: 2rem 2rem;
+    align-self: center;
+    border-radius: var(--radius) ;
+
+    & p span {
+        opacity: 0.7;
+        
+    }
+
+    & button {
+        width: fit-content;
+        background-color: var(--buttonColor);
+        padding: 0.5rem;
+        border-radius: inherit;
+        cursor: pointer;
+    
+        
+    }
+
+
+}

@@ -1,0 +1,75 @@
+:root {
+  --textColor: white;
+  --bgColor: black;
+  --buttonColor: rgb(15, 118, 15);
+  --mainColor: #1cbe5f;
+  --hoverColor: #68e36e;
+  --borderColor: #063a1c;
+  --marginSection: 10px;
+  --fontSizeP: 16px;
+}
+
+#login {
+  background-image: url('images/Gröna\ löv.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  padding: 2rem;
+}
+
+.inlogg {
+  background-color: rgb(171, 241, 175);
+  background: radial-gradient(
+    rgb(171, 241, 175),
+    rgb(171, 241, 175),
+    rgba(171, 241, 175, 0.534)
+  );
+  color: rgb(6, 40, 6);
+  display: flex;
+  margin: 0 auto 0 auto;
+  padding: 10px;
+  width: clamp(300px, 70%, 90%);
+  flex-direction: column;
+  border-radius: 10px;
+}
+.inlogg h3 {
+  margin-bottom: 0px;
+}
+#inputText {
+  margin-bottom: 1.5rem;
+}
+.privat,
+.företag {
+  border: 1px solid green;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 15px;
+  background-color: rgb(183, 244, 186);
+}
+.val {
+  margin-top: 2rem;
+  margin-bottom: 10px;
+}
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--textColor);
+  background-color: var(--buttonColor);
+  padding: 10px 20px;
+  border-style: 10px solid outset;
+  border-radius: 15px;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.button a:hover {
+  opacity: 0.9;
+  font-size: calc(var(--fontSizeP) + 0.1rem);
+  box-shadow: 0px 0px 5px hsl(0, 0%, 80%);
+}
+.space {
+  margin-bottom: 0.5rem;
+}

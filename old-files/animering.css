@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#piggyButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+#moneyFountain {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.money {
+    position: absolute;
+    font-size: 24px;
+    animation: shoot 1s forwards;
+    opacity: 1;
+}
+
+@keyframes shoot {
+    0% {
+        bottom: 0;
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    50%{
+        bottom: calc(200px + var(--heightOffset)); /* Modifiera höjden baserat på spridning */
+        transform: translateX(var(--spread)); /* Spridning */  
+    }
+    100% {
+        bottom: calc(200px + var(--heightOffset)); /* Modifiera höjden baserat på spridning */
+        transform: translateX(var(--spread)); /* Spridning */
+        opacity: 0;
+    }
+}
+
+

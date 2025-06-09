@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* mobile view COLUMN DESIGN image then text */
+:root {
+  --textColor: white;
+  --textColor2: black;
+  --bgColor: black;
+  --buttonColor: rgb(15, 118, 15);
+  --marginSection: 10px;
+  --fontSizeP: 16px;
+  --fontFamily: "sans-serif";
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fontFamily);
+  background-color: whitesmoke;
+}
+
+#hero-section {
+  background-image: url("images/img1_creditcard.jpg");
+  background-size: cover;
+  height: 300px;
+  color: var(--textColor);
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+#hero-section h1 {
+  margin: var(--marginSection);
+}
+#hero-section p {
+  margin: var(--marginSection);
+  margin-bottom: 2rem;
+}
+#hero-section a {
+  /* width: 50%; */
+  text-decoration: none;
+  color: var(--textColor1);
+  background-color: var(--buttonColor);
+  padding: 10px 20px;
+  border-style: 10px solid outset;
+  /* box-shadow: 0px 0px 10px white; */
+  border-radius: 15px;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+#hero-section a:hover {
+  opacity: 0.9;
+  font-size: calc(var(--fontSizeP) + 0.1rem);
+  box-shadow: 0px 0px 5px hsl(0, 0%, 80%);
+}
+
+.notHero {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  /* don't worry color is just for dev purposes  */
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  margin-bottom: 1rem;
+}
+
+.notHero h2,
+p {
+  margin: var(--marginSection);
+}
+
+@media (min-width: 550px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  #hero-section {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+
+  #hero-section a {
+    display: inline-block;
+    /* padding: 10px 20px; */
+  }
+
+  .notHero {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    /* gap: 1rem; */
+    margin: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .notHero img {
+    max-width: 50%;
+    /* align-items: flex-start; */
+  }
+
+  .notHero-content {
+    /* align-self: flex-end; */
+    align-self: center;
+  }
+
+  .notHero h2 {
+    position: relative;
+    top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .notHero:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="vld bank" />
+    <title>VLD Bank</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="images/bank.webp" as="image" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>VLD Bank</h1>
+      <nav id="desktop-nav" aria-label="desktop nav">
+        <ul>
+          <li><a href="index.html" aria-label="Index">Hem</a></li>
+          <li><a href="log-in.html" aria-label="Log in">Logga in</a></li>
+          <li><a href="prices.html" aria-label="Bli kund">Bli kund</a></li>
+          <li><a href="loan.html">Låna</a></li>
+          <li>
+            <a href="customer-service.html" aria-label="Customer service"
+              >Kunderservice</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <button id="hamburger" class="hamburger-hidden">
+        <img src="images/hamburger.svg" alt="Hamburger menu icon" />
+      </button>
+      <button id="close" class="hidden">
+        <img src="images/close.svg" alt="Close menu icon" />
+      </button>
+    </header>
+    <section>
+      <nav>
+        <ul id="mobile-menu" class="show" aria-label="mobile menu">
+          <li><a href="index.html" aria-label="Index">Hem</a></li>
+          <li><a href="log-in.html" aria-label="Log in">Logga in</a></li>
+          <li><a href="prices.html" aria-label="Bli kund">Bli kund</a></li>
+          <li><a href="loan.html">Låna</a></li>
+          <li>
+            <a href="customer-service.html" aria-label="Customer service"
+              >Kunderservice</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <main>
+      <section id="hero-section" aria-label="hero section">
+        <!-- image in the css only  -->
+        <h1 aria-label="hero title">VLD Bank - Vi lurar dig bäst</h1>
+        <p>
+          Välkommen till VLD Bank – en bank med ett annorlunda tänk. Vi sätter
+          dig i centrum och erbjuder transparenta och smarta finansiella
+          lösningar som gör din vardag enklare.
+        </p>
+        <a href="./prices.html">Bli kund</a>
+      </section>
+
+      <section class="card" aria-label="credit card">
+        <img src="images/img1_creditcard.webp" alt="image 1" />
+        <article>
+          <h2 aria-label="credit card title">
+            VLD – Där Ditt Förtroende är Vårt Ansvar
+          </h2>
+          <p>
+            Välkommen till Vi Lurar Dig Bank – en annorlunda bank med ett
+            tydligt löfte: att alltid ge dig full transparens och de bästa
+            lösningarna för din ekonomi. Hos oss får du verktygen att hantera
+            dina finanser med självförtroende. Vi erbjuder smarta lån, trygga
+            sparlösningar och rådgivning som gör skillnad. Bli kund idag och
+            upptäck hur vi gör det krångliga enkelt!
+          </p>
+        </article>
+      </section>
+
+      <section class="card" aria-label="INVESTERING">
+        <img src="images/img2_financechart.webp" alt="image 2" loading="lazy" />
+        <article>
+          <h2 aria-label="INVESTERING title">Följ Marknadens Rörelser</h2>
+          <p>
+            Ta kontroll över dina investeringar med Vi Lurar Dig Bank. Vår
+            plattform ger dig realtidsinformation och verktyg för att fatta
+            smarta beslut. Håll koll på marknadstrender, analysera data och
+            investera med förtroende. Låt oss hjälpa dig navigera i en
+            föränderlig värld av finanser.
+          </p>
+        </article>
+      </section>
+
+      <section class="card" aria-label="reseförsäkring">
+        <img src="images/img3_pplsmiling.webp" alt="image 3" loading="lazy" />
+        <article>
+          <h2 aria-label="reseförsäkring title">För Vänner och Familj</h2>
+          <p>
+            Vi på VLD Bank vet att livet handlar om mer än bara siffror. Vi tror
+            på att skapa värde för dig och dina närmaste. Oavsett om du planerar
+            inför framtiden eller bara vill ha ett bättre sätt att hantera
+            vardagsekonomin, är vi här för att göra det enklare. Låt oss hjälpa
+            dig bygga en tryggare framtid tillsammans med dem du bryr dig om.
+          </p>
+        </article>
+      </section>
+
+      <section class="card" aria-label="lån">
+        <img src="images/img4_handshake.webp" alt="image 4" loading="lazy" />
+        <article>
+          <h2 aria-label="lån title">
+            En Bank för Människor, Inte Bara Pengar
+          </h2>
+          <p>
+            Vi Lurar Dig Bank är här för att bygga starka relationer. Vi ser
+            våra kunder som partners och vänner. Genom att erbjuda flexibla
+            finansiella lösningar hjälper vi både dig och dina nära att nå era
+            mål. Kom och upptäck en bankupplevelse där gemenskap och tillit står
+            i centrum.
+          </p>
+        </article>
+      </section>
+
+      <section class="card" aria-label="customer-service">
+        <img
+          src="images/img5_customerService.webp"
+          alt="image 5"
+          loading="lazy"
+        />
+        <article>
+          <h2 aria-label="customer service title">Alltid Här för Dig</h2>
+          <p>
+            Vår kundservice är redo att hjälpa dig när som helst. Vi på Vi Lurar
+            Dig Bank värdesätter varje kund, och vårt team finns tillgängligt
+            för att svara på dina frågor och erbjuda professionell support.
+            Kontakta oss när du behöver hjälp, och vi ser till att lösa dina
+            problem snabbt och effektivt.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p id="keepContact">Håll kontakten med oss!</p>
+      <div class="contactDiv">
+        <section id="phoneMail" aria-label="Contact">
+          <p>Telefon: <a href="">046-1234569</a></p>
+          <p>Mail: <a href="">v.l.d@yahoo.com</a></p>
+        </section>
+        <button id="pigBtn">
+          <svg
+            role="img"
+            title="pig icon"
+            id="piggy"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512"
+            aria-label="Money fountain"
+          >
+            <path
+              d="M400 96l0 .7c-5.3-.4-10.6-.7-16-.7L256 96c-16.5 0-32.5 2.1-47.8 6c-.1-2-.2-4-.2-6c0-53 43-96 96-96s96 43 96 96zm-16 32c3.5 0 7 .1 10.4 .3c4.2 .3 8.4 .7 12.6 1.3C424.6 109.1 450.8 96 480 96l11.5 0c10.4 0 18 9.8 15.5 19.9l-13.8 55.2c15.8 14.8 28.7 32.8 37.5 52.9l13.3 0c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32l-32 0c-9.1 12.1-19.9 22.9-32 32l0 64c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-32-128 0 0 32c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-64c-34.9-26.2-58.7-66.3-63.2-112L68 304c-37.6 0-68-30.4-68-68s30.4-68 68-68l4 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-4 0c-11 0-20 9-20 20s9 20 20 20l31.2 0c12.1-59.8 57.7-107.5 116.3-122.8c12.9-3.4 26.5-5.2 40.5-5.2l128 0zm64 136a24 24 0 1 0 -48 0 24 24 0 1 0 48 0z"
+            />
+          </svg>
+          <div id="moneyFountain"></div>
+        </button>
+        <section class="iconic">
+          <svg
+            role="img"
+            title="snapchat icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M496.9 366.6c-3.4-9.2-9.8-14.1-17.1-18.2-1.4-.8-2.6-1.5-3.7-1.9-2.2-1.1-4.4-2.2-6.6-3.4-22.8-12.1-40.6-27.3-53-45.4a102.9 102.9 0 0 1 -9.1-16.1c-1.1-3-1-4.7-.2-6.3a10.2 10.2 0 0 1 2.9-3c3.9-2.6 8-5.2 10.7-7 4.9-3.2 8.8-5.7 11.2-7.4 9.4-6.5 15.9-13.5 20-21.3a42.4 42.4 0 0 0 2.1-35.2c-6.2-16.3-21.6-26.4-40.3-26.4a55.5 55.5 0 0 0 -11.7 1.2c-1 .2-2.1 .5-3.1 .7 .2-11.2-.1-22.9-1.1-34.5-3.5-40.8-17.8-62.1-32.7-79.2A130.2 130.2 0 0 0 332.1 36.4C309.5 23.5 283.9 17 256 17S202.6 23.5 180 36.4a129.7 129.7 0 0 0 -33.3 26.8c-14.9 17-29.2 38.4-32.7 79.2-1 11.6-1.2 23.4-1.1 34.5-1-.3-2-.5-3.1-.7a55.5 55.5 0 0 0 -11.7-1.2c-18.7 0-34.1 10.1-40.3 26.4a42.4 42.4 0 0 0 2 35.2c4.1 7.8 10.7 14.7 20 21.3 2.5 1.7 6.4 4.2 11.2 7.4 2.6 1.7 6.5 4.2 10.3 6.7a11.1 11.1 0 0 1 3.3 3.3c.8 1.6 .8 3.4-.4 6.6a102 102 0 0 1 -8.9 15.8c-12.1 17.7-29.4 32.6-51.4 44.6C32.4 348.6 20.2 352.8 15.1 366.7c-3.9 10.5-1.3 22.5 8.5 32.6a49.1 49.1 0 0 0 12.4 9.4 134.3 134.3 0 0 0 30.3 12.1 20 20 0 0 1 6.1 2.7c3.6 3.1 3.1 7.9 7.8 14.8a34.5 34.5 0 0 0 9 9.1c10 6.9 21.3 7.4 33.2 7.8 10.8 .4 23 .9 36.9 5.5 5.8 1.9 11.8 5.6 18.7 9.9C194.8 481 217.7 495 256 495s61.3-14.1 78.1-24.4c6.9-4.2 12.9-7.9 18.5-9.8 13.9-4.6 26.2-5.1 36.9-5.5 11.9-.5 23.2-.9 33.2-7.8a34.6 34.6 0 0 0 10.2-11.2c3.4-5.8 3.3-9.9 6.6-12.8a19 19 0 0 1 5.8-2.6A134.9 134.9 0 0 0 476 408.7a48.3 48.3 0 0 0 13-10.2l.1-.1C498.4 388.5 500.7 376.9 496.9 366.6zm-34 18.3c-20.7 11.5-34.5 10.2-45.3 17.1-9.1 5.9-3.7 18.5-10.3 23.1-8.1 5.6-32.2-.4-63.2 9.9-25.6 8.5-42 32.8-88 32.8s-62-24.3-88.1-32.9c-31-10.3-55.1-4.2-63.2-9.9-6.6-4.6-1.2-17.2-10.3-23.1-10.7-6.9-24.5-5.7-45.3-17.1-13.2-7.3-5.7-11.8-1.3-13.9 75.1-36.4 87.1-92.6 87.7-96.7 .6-5 1.4-9-4.2-14.1-5.4-5-29.2-19.7-35.8-24.3-10.9-7.6-15.7-15.3-12.2-24.6 2.5-6.5 8.5-8.9 14.9-8.9a27.6 27.6 0 0 1 6 .7c12 2.6 23.7 8.6 30.4 10.2a10.7 10.7 0 0 0 2.5 .3c3.6 0 4.9-1.8 4.6-5.9-.8-13.1-2.6-38.7-.6-62.6 2.8-32.9 13.4-49.2 26-63.6 6.1-6.9 34.5-37 88.9-37s82.9 29.9 88.9 36.8c12.6 14.4 23.2 30.7 26 63.6 2.1 23.9 .3 49.5-.6 62.6-.3 4.3 1 5.9 4.6 5.9a10.6 10.6 0 0 0 2.5-.3c6.7-1.6 18.4-7.6 30.4-10.2a27.6 27.6 0 0 1 6-.7c6.4 0 12.4 2.5 14.9 8.9 3.5 9.4-1.2 17-12.2 24.6-6.6 4.6-30.4 19.3-35.8 24.3-5.6 5.1-4.8 9.1-4.2 14.1 .5 4.2 12.5 60.4 87.7 96.7C468.6 373 476.1 377.5 462.9 384.9z"
+            />
+          </svg>
+          <svg
+            role="img"
+            title="tiktok icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"
+            />
+          </svg>
+          <svg
+            role="img"
+            title="reddit icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M0 256C0 114.6 114.6 0 256 0S512 114.6 512 256s-114.6 256-256 256L37.1 512c-13.7 0-20.5-16.5-10.9-26.2L75 437C28.7 390.7 0 326.7 0 256zM349.6 153.6c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7c-20.6 0-37.8 14.6-41.8 34c-34.5 3.7-61.4 33-61.4 68.4l0 .2c-37.5 1.6-71.8 12.3-99 29.1c-10.1-7.8-22.8-12.5-36.5-12.5c-33 0-59.8 26.8-59.8 59.8c0 24 14.1 44.6 34.4 54.1c2 69.4 77.6 125.2 170.6 125.2s168.7-55.9 170.6-125.3c20.2-9.6 34.1-30.2 34.1-54c0-33-26.8-59.8-59.8-59.8c-13.7 0-26.3 4.6-36.4 12.4c-27.4-17-62.1-27.7-100-29.1l0-.2c0-25.4 18.9-46.5 43.4-49.9l0 0c4.4 18.8 21.3 32.8 41.5 32.8zM177.1 246.9c16.7 0 29.5 17.6 28.5 39.3s-13.5 29.6-30.3 29.6s-31.4-8.8-30.4-30.5s15.4-38.3 32.1-38.3zm190.1 38.3c1 21.7-13.7 30.5-30.4 30.5s-29.3-7.9-30.3-29.6c-1-21.7 11.8-39.3 28.5-39.3s31.2 16.6 32.1 38.3zm-48.1 56.7c-10.3 24.6-34.6 41.9-63 41.9s-52.7-17.3-63-41.9c-1.2-2.9 .8-6.2 3.9-6.5c18.4-1.9 38.3-2.9 59.1-2.9s40.7 1 59.1 2.9c3.1 .3 5.1 3.6 3.9 6.5z"
+            />
+          </svg>
+          <svg
+            role="img"
+            title="facebook icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"
+            />
+          </svg>
+          <svg
+            role="img"
+            title="x icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+            />
+          </svg>
+          <svg
+            role="img"
+            title="instagram icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+            />
+          </svg>
+        </section>
+      </div>
+      <section id="copyright">
+        <p>&copy; All rights reserved VLD AB</p>
+        <p id="realName">Vi Lurar Dig Bank AB</p>
+      </section>
+    </footer>
+  </body>
+</html>

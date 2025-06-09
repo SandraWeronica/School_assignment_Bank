@@ -1,0 +1,135 @@
+/* footer färg */
+body {
+  margin: 0;
+}
+
+/* footer färg och stil + flex */
+footer {
+  background-color: #1cbe5f;
+  font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* kontakt-titel-stil */
+#keepContact {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+/* telefon och mail flex */
+#phoneMail {
+  display: block;
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+#phoneMail p {
+  margin: 0;
+}
+
+/* ikon-margin */
+.iconic {
+  margin: 50px 0;
+  float: left;
+  display: grid;
+  grid-template-columns: repeat(6, 25px);
+  grid-template-rows: 25px 2fr;
+  gap: 10px;
+}
+/* ikon-storlek */
+svg {
+  height: 24px;
+  margin: 5px;
+}
+/* mus över ikoner */
+.iconic svg:hover {
+  cursor: pointer;
+  fill: hsl(123, 69%, 65%);
+  height: 26px;
+}
+
+/* copyright linje */
+#copyright p {
+  margin: 2px;
+}
+#copyright {
+  border-top: 1px solid;
+  padding-top: 10px;
+  align-self: stretch;
+  text-align: center;
+  margin: 3%;
+}
+/* vi lurar dig - namn */
+#realName {
+  font-size: 10px;
+  font-style: italic;
+  text-align: center;
+}
+
+#pigBtn{
+  display: none;
+}
+
+@media (min-width: 768px) {
+
+  .contactDiv {
+    display: grid;
+    grid-template-columns: 1fr 46vw 1fr 46vw 1fr;
+    grid-template-rows: 10vh;
+    align-items: center;
+  }
+  #phoneMail{
+    grid-column: 2;
+  }
+  .iconic {
+    grid-template-columns: repeat(3, 25px);
+    grid-template-rows: repeat(2, 25px);
+    justify-self: end;
+  }
+  
+  #pigBtn{
+    display: block;
+    background: transparent;
+    border: none;
+    position: relative;
+    outline: none;
+
+
+  }
+
+  #moneyFountain{
+    position: absolute;
+    height: 300px;
+    overflow: hidden;
+    width: 300px;
+    top:-34vh;
+    left: -140px;
+    cursor: default;
+  }
+  .money{
+    position: absolute;
+    font-size: 24px;
+    animation: shoot 1s forwards;
+    opacity: 1;
+  }
+  @keyframes shoot{
+    0%{
+      bottom: 150px;
+      transform: translateX(-30%);
+      opacity: 1;
+    }
+    50%{
+      bottom: calc(200px + var(--heightOffset));
+      transform: translateX(var(--spread));
+    }
+    100%{
+      bottom: calc(200px + var(--heightOffset));
+      transform: translateX(var(--spread));
+      opacity: 0;
+    }
+  }
+}

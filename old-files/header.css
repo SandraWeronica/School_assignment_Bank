@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1cbe5f;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  flex-shrink: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1cbe5f;
+  padding: 4%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  opacity: 95%;
+  height: 100px;
+}
+
+.show {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+#hamburger img,
+#close img {
+  width: 2rem;
+  height: 2rem;
+}
+#desktop-nav {
+  display: none;
+}
+
+#mobile-menu {
+  background-color: #1cbe5f;
+  padding: 0.5rem;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  z-index: 1;
+  opacity: 95%;
+}
+
+#mobile-menu li {
+  padding: 1.2rem;
+  border-bottom: 1px solid;
+  border-color: #063a1c;
+}
+
+#mobile-menu a {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#mobile-menu a:hover {
+  color: #68e36e;
+}
+#hamburger,
+#close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* generate filter value from https://isotropic.co/tool/hex-color-to-css-filter/ */
+#hamburger:hover img,
+#close:hover img {
+  filter: invert(65%) sepia(96%) saturate(278%) hue-rotate(72deg)
+    brightness(102%) contrast(88%);
+  transform: scale(1.2);
+}
+@media (min-width: 768px) {
+  #mobile-menu {
+    padding: 0 1.5rem 0 1.5rem;
+    position: fixed;
+    height: 63%;
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+    opacity: 95%;
+  }
+
+  #mobile-menu li {
+    padding: 1.5rem;
+    border-bottom: 1px solid;
+    border-color: #063a1c;
+  }
+
+  #mobile-menu a {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1200px) {
+  #desktop-nav {
+    display: flex;
+  }
+
+  #desktop-nav ul {
+    display: flex;
+    flex-direction: row;
+    color: black;
+  }
+  #desktop-nav a {
+    flex-shrink: 0;
+    color: black;
+    font-size: 1.2rem;
+  }
+  #desktop-nav a:hover {
+    color: #68e36e;
+  }
+  #desktop-nav ul {
+    gap: 2rem;
+  }
+  #hamburger {
+    display: none;
+  }
+  #mobile-menu {
+    display: none;
+  }
+  #hamburger,
+  #close {
+    display: none;
+  }
+}
